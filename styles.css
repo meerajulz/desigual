@@ -1,0 +1,248 @@
+/* Font Faces */
+
+@font-face {
+    font-family: 'Test Founders Grotesk';
+    src: url('TestFoundersGrotesk-Regular.woff2') format('woff2'), url('./fonts/test-founders-grotesk-regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Test Founders Grotesk';
+    src: url('TestFoundersGrotesk-Medium.woff2') format('woff2'), url('./fonts/TestFoundersGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Base Styles */
+
+body {
+    font-family: 'Test Founders Grotesk';
+    font-weight: 400;
+    font-size: 0.875em;
+    /* 14px to em */
+    color: #000;
+}
+
+input[type="radio"] {
+    margin: 0;
+}
+
+
+/* Layout Components */
+
+.size-guide {
+    width: 80%;
+    margin: 1.25em auto;
+    /* 20px to em */
+    padding: 1em;
+    /* 15px to em */
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+    /* 10px to em */
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    display: flex-block;
+}
+
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin: 3.57em 0 1.43em;
+    /* 50px and 20px to em */
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.83em;
+    /* 10px to em */
+}
+
+h3 {
+    font-size: 1em;
+    margin-bottom: 2.5em;
+    /* 35px to em */
+}
+
+
+/* Menu Components */
+
+.menu-size {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.714em 0;
+    /* 10px to em */
+}
+
+.tab {
+    display: flex;
+    align-content: flex-start;
+}
+
+.link {
+    display: flex;
+    align-content: flex-start;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 400;
+    text-decoration: none;
+    margin-right: 1.07em;
+    /* 15px to em */
+    padding-bottom: 0.143em;
+    /* 2px to em */
+    color: #000;
+}
+
+.link.active,
+.link:hover {
+    border-bottom: 0.071em solid #000;
+    /* 1px to em */
+}
+
+
+/* Input Measures */
+
+.input-measures {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.75em;
+}
+
+.input-measures label {
+    margin: 0 0.357em;
+    /* 5px to em */
+}
+
+.label-measures {
+    display: flex;
+    align-content: flex-start;
+}
+
+
+/* Content Areas */
+
+.content {
+    display: none;
+    padding: 0 2.5em;
+    /* 35px to em */
+}
+
+.content.active {
+    display: block;
+}
+
+
+/* Table Styles */
+
+.table-responsive {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 3.93em;
+    /* 55px to em */
+}
+
+.international-table {
+    max-width: 65%;
+    margin: 3.93em auto;
+    /* 55px to em */
+}
+
+.international-table table {
+    width: 100%;
+}
+
+.img {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+table {
+    flex: 1;
+    margin-left: 1.428em;
+    /* 20px to em */
+    width: 70%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 0.571em;
+    /* 8px to em */
+    border-bottom: 0.071em solid #ddd;
+    /* 1px to em */
+    vertical-align: middle;
+    font-size: 0.857em;
+    /* 12px to em */
+    font-weight: 300;
+}
+
+th {
+    border-bottom: 0.071em solid #000;
+    /* 1px to em */
+}
+
+td {
+    font-size: 0.75em;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 48em) {
+    /* 768px to em */
+    .size-guide {
+        width: 90%;
+    }
+    .menu-size {
+        flex-direction: column;
+        gap: 1.07em;
+        /* 15px to em */
+    }
+    .input-measures {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .table-responsive {
+        flex-direction: column;
+    }
+    .img {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .img img {
+        max-width: 6.25em;
+        /* 100px to em */
+        width: auto;
+    }
+    table {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1.428em;
+        /* 20px to em */
+    }
+}
